@@ -1,0 +1,45 @@
+@mixin button {
+  cursor: pointer;
+}
+
+@mixin shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+@mixin shadow-large {
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin aside-title {
+  font-weight: 700;
+  font-size: 1.67rem;
+  border-bottom: 1px solid $color-secondary;
+}
+
+@mixin svg-hover {
+  :is(:hover, :focus) {
+    filter: invert(27%) sepia(98%) saturate(1183%) hue-rotate(190deg)
+      brightness(84%) contrast(92%);
+  }
+}
+
+@mixin svg-color {
+  filter: invert(27%) sepia(98%) saturate(1183%) hue-rotate(190deg)
+    brightness(84%) contrast(92%);
+}
+
+@mixin drag {
+  -webkit-user-drag: element;
+}
+
+@mixin rounded($position) {
+  @if $position == 'top' {
+    border-start-start-radius: 1rem;
+    border-start-end-radius: 1rem;
+  } @else if $position == 'bottom' {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  } @else {
+    border-radius: 1rem;
+  }
+}

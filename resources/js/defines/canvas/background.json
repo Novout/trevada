@@ -1,0 +1,7 @@
+{
+  "size": [5, 4],
+  "max": 100,
+  "background": ["0x135CA6", "0x4C95DE"],
+  "alpha": 0.35,
+  "onlyExample": true
+}

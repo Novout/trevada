@@ -1,0 +1,95 @@
+@mixin full-w {
+  width: 100%;
+}
+
+@mixin page {
+  min-height: 100vh;
+  @include full-w;
+}
+
+@mixin spacement($property, $value) {
+  @if $property != 'padding' and $property != 'margin' {
+    @error "#{$property} is a invalid entry value";
+  }
+
+  @if $value > 5 or $value <= 0 {
+    @error "#{$value} is a invalid entry value";
+  }
+
+  $define: 0.5rem;
+
+  @if $property == 'padding' {
+    @if $value == 1 {
+      padding: $define;
+    } @else if $value == 2 {
+      padding: $define * 2;
+    } @else if $value == 3 {
+      padding: $define * 3;
+    } @else if $value == 4 {
+      padding: $define * 4;
+    } @else if $value == 5 {
+      padding: $define * 5;
+    } @else {
+      @error "Unknown value #{$value}.";
+    }
+  } @else if $property == 'margin' {
+    @if $value == 1 {
+      margin: $define;
+    } @else if $value == 2 {
+      margin: $define * 2;
+    } @else if $value == 3 {
+      margin: $define * 3;
+    } @else if $value == 4 {
+      margin: $define * 4;
+    } @else if $value == 5 {
+      margin: $define * 5;
+    } @else {
+      @error "Unknown value #{$value}.";
+    }
+  }
+}
+
+@mixin center($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @if $direction == 'row' {
+    flex-direction: row;
+  } @else if $direction == 'column' {
+    flex-direction: column;
+  }
+}
+
+@mixin center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin priority {
+  flex-grow: 1;
+}
+
+@mixin font($type) {
+  @if $type == 'xs' {
+    font-size: 0.75rem;
+  } @else if $type == 'sm' {
+    font-size: 0.875rem;
+  } @else if $type == 'lg' {
+    font-size: 1.33rem;
+  } @else if $type == 'xl' {
+    font-size: 1.67rem;
+  } @else if $type == '2x' {
+    font-size: 2rem;
+  } @else if $type == '3x' {
+    font-size: 3rem;
+  } @else if $type == '4x' {
+    font-size: 4rem;
+  } @else if $type == '5x' {
+    font-size: 5rem;
+  } @else if $type == '6x' {
+    font-size: 6rem;
+  }
+}

@@ -1,0 +1,26 @@
+@use "@/utils";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$color-primary: #135ca6;
+$color-secondary: #4c95de;
+$color-tertiary: #1d3c5b;
+$color-background: #ffffff;
+$color-white: #fff;
+$color-black: #000;
+$color-text: rgb(113, 116, 143);
+
+$campaign-background: #27232a;
+$campaign-background-border: #332e36;
+$campaign-black: #000;
+$campaign-white: #fff;
+$campaign-white-hover: rgba(255, 255, 255, 0.5);
+$campaign-context-height: 15rem;
+$campaign-chat-width: 30rem;
+$campaign-alpha: rgba(255, 255, 255, 0.01);
+
+$profile-background: #0e0d10;
+
+$scroll-track: rgba(255, 255, 255, 0.3);
+$scroll-thumb: rgba(19, 92, 165, 0.5);
+$scroll-hover: rgba(19, 92, 165, 1);

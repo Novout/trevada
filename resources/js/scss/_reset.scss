@@ -1,0 +1,47 @@
+@use "@/utils";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#app {
+  @include utils.size-page;
+}
+
+#app {
+  max-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+  background: $campaign-background;
+}
+
+*::-webkit-scrollbar-track {
+  background: $campaign-background;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $scroll-thumb;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: $scroll-hover;
+}

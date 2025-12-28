@@ -1,0 +1,11 @@
+@mixin text($color) {
+  color: $color;
+}
+
+@mixin bg($color) {
+  background-color: $color;
+}
+
+@mixin border($color, $type) {
+  border: $type solid $color;
+}

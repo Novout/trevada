@@ -1,0 +1,84 @@
+$mobile-width: 640px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$wide-width: 1280px;
+
+$mobile-height: 640px;
+$tablet-height: 768px;
+$desktop-height: 1024px;
+$wide-height: 1280px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (max-width: #{$wide-width}) {
+    @content;
+  }
+}
+
+@mixin mobile-height {
+  @media (max-height: #{$mobile-height}) {
+    @content;
+  }
+}
+
+@mixin tablet-height {
+  @media (max-height: #{$tablet-height}) {
+    @content;
+  }
+}
+
+@mixin desktop-height {
+  @media (max-height: #{$desktop-height}) {
+    @content;
+  }
+}
+
+@mixin wide-height {
+  @media (max-height: #{$wide-height}) {
+    @content;
+  }
+}
+
+@mixin animation-ease($time) {
+  transition: all $time ease;
+}
+
+@mixin fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vue-fade-enter-active,
+.vue-fade-leave-active {
+  transition: opacity 300ms ease;
+}
+
+.vue-fade-leave-to {
+  opacity: 0;
+}
